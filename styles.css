@@ -1,13 +1,64 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background color */
+    color: #fff; /* Default text color */
 }
 
-h1 {
-    color: #333;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #fff; /* White bottom border */
 }
 
-p {
-    color: #666;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.nav-left .name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#about-me {
+    padding: 20px;
+    background-color: #222; /* Slightly lighter background for the section */
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about-me-text {
+    max-width: 600px;
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }

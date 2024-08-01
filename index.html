@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Header Example</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Simple Website</h1>
-    <p>This is a simple website created using HTML, CSS, and Node.js.</p>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="name">Muhammad Akhsanul Zidan</span>
+            </div>
+            <div class="nav-right">
+                <a href="#about-me">About Me</a>
+                <a href="#tech-stacks">Tech Stacks</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <div class="about-me-container">
+            <img src="images/profile.jpg" alt="Muhammad Akhsanul Zidan" class="about-me-image">
+            <div class="about-me-text">
+                <p>Nice to meet you! About me - Muhammad Akhsanul Zidan. "Technology works with our hope, imagination, and hard work. It turns what was thought to be impossible into the possible." As a passionate Computer Science enthusiast, I thrive on exploring the endless possibilities within technology. With skills in Full Stack Software Development, Artificial Intelligence, and Network Security, I am dedicated to creating innovative solutions. My long journey in technology has been driven by an insatiable curiosity and a desire to make a positive impact.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
