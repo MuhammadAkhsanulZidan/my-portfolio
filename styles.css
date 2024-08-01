@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #121212; /* Dark background color */
     color: #fff; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of viewport */
 }
 
 header {
@@ -36,7 +39,11 @@ nav {
 }
 
 #about-me {
-    padding: 20px;
+    display: flex;
+    flex: 1; /* Allows the section to grow and fill available space */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 40px 20px;
     background-color: #222; /* Slightly lighter background for the section */
 }
 
@@ -49,9 +56,10 @@ nav {
 
 .about-me-image {
     width: 200px;
-    height: auto;
-    border-radius: 8px;
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
     margin-right: 20px;
+    object-fit: cover; /* Ensures the image covers the element properly */
 }
 
 .about-me-text {
@@ -61,4 +69,173 @@ nav {
 .about-me-text p {
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+#tech-stacks {
+    padding: 40px 20px;
+    background-color: #333; /* Background color for the tech stacks section */
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: #fff; /* Ensure white background for images */
+    border-radius: 8px; /* Optional: make the image background circular */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+}
+
+.tech-item p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+#projects {
+    padding: 40px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.project {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.project p {
+    text-align: justify;
+}
+
+.project h4 {
+    color: #bbb;
+    font-weight: lighter;
+}
+
+.image-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #333;
+}
+
+.project-image {
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.image-list::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.scroll-arrow {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Hide arrows by default */
+}
+
+.scroll-arrow.prev {
+    left: 0;
+}
+
+.scroll-arrow.next {
+    right: 0;
+}
+
+.scroll-arrow.show {
+    display: block; /* Show arrows when needed */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.modal-caption {
+    margin: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
 }
