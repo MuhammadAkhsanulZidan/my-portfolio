@@ -148,7 +148,12 @@ nav {
     object-fit: contain;
     border-radius: 8px;
     border-radius: 8px;
+    background-color: #2c2c2c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-image:hover {
+    cursor: pointer;
 }
 
 .image-list::-webkit-scrollbar {
@@ -167,6 +172,7 @@ nav {
 .scroll-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -239,4 +245,90 @@ nav {
     color: #ddd;
     text-decoration: none;
     cursor: pointer;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-item {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.project-item p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color to avoid changing link color */
+    display: block; /* Make the anchor tag a block element */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-link:hover .project-item {
+    background-color: #555; /* Change background color on hover */
+}
+#contact {
+    padding: 40px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center the list */
+    max-width: 500px; /* Limit the width of the list */
+}
+
+.contact-list li {
+    margin-bottom: 20px; /* Space between items */
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* Display items as a flexbox */
+    align-items: center; /* Center items vertically */
+    transition: transform 0.3s ease; /* Smooth transform effect on hover */
+}
+
+.contact-link:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width of the container */
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px; /* Space between icon and text */
+    object-fit: contain;
 }
