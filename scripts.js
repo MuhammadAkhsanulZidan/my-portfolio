@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navRight = document.querySelector('.nav-right');
+
+    navToggle.addEventListener('click', function () {
+        navRight.classList.toggle('active');
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.scroll-container').forEach(container => {
         const prevButton = container.querySelector('.scroll-arrow.prev');
