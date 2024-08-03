@@ -167,6 +167,14 @@ nav {
     cursor: pointer;
 }
 
+.project-description {
+    line-height: 1.3;
+}
+
+.project-description span{
+    color: rgb(156, 134, 255);
+}
+
 .image-list::-webkit-scrollbar {
     height: 8px;
 }
